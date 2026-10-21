@@ -2,9 +2,10 @@
 
 Progetto nativo SwiftUI per Luigi, indipendente da Replit. Nome provvisorio: StickPocket.
 
-**Stato: codice di una prima versione di sviluppo. Non è una build installabile,
-non è stato compilato con Xcode e non è su TestFlight. Il recupero da TikTok non è
-stato verificato su un account reale o su iPhone.**
+**Stato: prima versione di sviluppo, compilata con Xcode 26.6 in configurazione
+Release per iPhone. L’archivio prodotto è senza firma: non è installabile e non
+è su TestFlight. Il recupero da TikTok non è stato verificato su un account
+reale o su iPhone. Per i test eseguiti vedere VALIDATION.md.**
 
 ## Cosa contiene
 
@@ -43,7 +44,7 @@ oppure uno screenshot e ritagliarlo. Uno screenshot non conserva l’animazione.
 
 ## Apertura e prove
 
-Requisiti: Xcode 16 o successivo, SDK iOS e simulatore iPhone; destinazione minima
+Requisiti: Xcode 26 o successivo, SDK iOS e simulatore iPhone; destinazione minima
 iOS 17. Nessun pacchetto Swift esterno, nessuna chiave API e nessun server.
 
 1. Aprire StickPocket.xcodeproj.
@@ -66,6 +67,15 @@ Il workflow si attiva solo manualmente. La prima esecuzione è stata avviata il
 21 ottobre 2026; l’esito verificato è riportato in VALIDATION.md.
 Quando i test riescono, il workflow avvia anche l’app sul simulatore e conserva
 una schermata nell’artefatto test-ios, insieme al risultato dei test.
+
+Il workflow manuale `Build iPhone con Xcode 26` esegue anche:
+
+    bash scripts/archive-ios.sh
+
+Questa verifica genera un archivio Release per iPhone senza firma, scaricabile
+dagli artefatti GitHub per 7 giorni. Non è un IPA installabile: per distribuirlo
+servono la configurazione Apple e una nuova build firmata. Il codice sorgente
+rimane nel repository dopo la scadenza degli artefatti.
 
 Per rigenerare il progetto dopo aver aggiunto o rimosso file Swift:
 

@@ -13,7 +13,9 @@ Data: 21 ottobre 2026.
 | Impostazione dei target | Solo iPhone, iOS 17 o successivo |
 | File plist, schema Xcode e workspace XML | Validamente serializzati |
 | Sintassi script di test e generatore Python | Superata |
-| Avvio della verifica GitHub Actions | Prima esecuzione 39614222806 avviata; risultato ancora in attesa |
+| Build Release iPhone con Xcode 26.6 / SDK iOS 26.5 | Archivio creato con successo, senza firma |
+| Test nativi XCTest su iPhone 17 Pro, iOS 26.5 | 7 superati, 0 falliti |
+| Selettore immagini Node nella stessa esecuzione CI | 9 superati, 0 falliti |
 | Progetto su GitHub | Codice e risorse in th1sable/stickpocket-ios, pubblico con autorizzazione del proprietario |
 
 I test Node coprono selezione di immagini caricate, duplicati, esclusione di
@@ -23,22 +25,27 @@ il selettore tenta di leggere cookie, testo del corpo pagina o interrogare
 genericamente tutti gli elementi. Questi test usano un DOM simulato: non
 dimostrano compatibilità con il sito TikTok reale.
 
-## Predisposto ma non eseguito
+## Test nativi
 
 La suite XCTest include controlli per link TikTok, destinazioni di download,
 ritaglio nei limiti dell’immagine, conservazione di una GIF animata byte per byte,
 duplicati, riapertura della raccolta, preferiti, rinomina, eliminazione, file
 non validi e protezione di un indice corrotto.
 
-È in corso la prima esecuzione remota con Xcode 16.4 e simulatore iPhone 16 Pro,
-iOS 18.5, su GitHub Actions. Questo ambiente locale non dispone di Xcode o di un SDK
-iOS. Il controllo della sintassi Swift
-non verifica i tipi, l’esistenza delle API, la compilazione o il comportamento
-dell’app.
+Le prime esecuzioni sul simulatore iOS 18.5 hanno compilato il progetto, ma
+l’avvio dei test è fallito. Il registro della prima mostra la libreria
+libswiftWebKit.dylib mancante, un problema del runtime documentato da Apple:
+https://developer.apple.com/forums/thread/785964 .
+
+Il workflow è stato aggiornato a macOS 26 e al simulatore della versione SDK
+installata. Nessun test è stato disattivato, e la versione minima dell’app
+rimane iOS 17. L’esecuzione aggiornata ha superato tutti i 7 test XCTest il 21 ottobre 2026.
+I test verificano la conservazione byte per byte della GIF, i duplicati, la
+persistenza della raccolta e dei preferiti, le operazioni di rinomina ed
+eliminazione, i limiti degli input e le regole sui link.
 
 ## Ancora da verificare su Apple
 
-- Compilazione Xcode e test XCTest.
 - Avvio dell’interfaccia su simulatore e iPhone, accessibilità e dimensioni testo.
 - Importazione da Foto e dai provider File, anche iCloud Drive.
 - Login web TikTok, apertura dei commenti e di una propria chat.
@@ -52,5 +59,16 @@ dell’app.
 
 ## Stato di consegna
 
-Progetto sorgente caricato su GitHub. Nessun IPA firmato, nessuna app installata,
-nessun link TestFlight, nessuna distribuzione e nessuna verifica Apple effettuata.
+Progetto sorgente pubblico su GitHub. Archivio Release iPhone prodotto con
+Xcode 26.6, SDK iOS 26.5 e destinazione minima iOS 17, verificati anche nel plist
+del pacchetto. UIDeviceFamily contiene solo 1 (iPhone). Archivio privo di firma.
+
+Build Release verificata:
+https://github.com/th1sable/stickpocket-ios/actions/runs/39614813338
+
+Test aggiornati:
+https://github.com/th1sable/stickpocket-ios/actions/runs/39615484083
+
+Nessun IPA firmato, nessun link TestFlight, nessuna app installata su un iPhone
+reale e nessuna distribuzione ad Apple. Il recupero degli sticker dal sito TikTok
+resta da provare con un account reale.
