@@ -1,0 +1,21 @@
+name: Build iPhone con Xcode 26
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Archivio Release iPhone senza firma
+        run: bash scripts/archive-ios.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: StickPocket-unsigned-archive
+          path: build/StickPocket-unsigned.xcarchive.zip
+          if-no-files-found: error
+          retention-days: 7
