@@ -1,0 +1,39 @@
+# Avvio manuale dalla dashboard Codemagic. Nessun trigger su push o pull request.
+workflows:
+  stickpocket-testflight:
+    name: StickPocket - TestFlight interno
+    max_build_duration: 20
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: ciotola-apple
+    environment:
+      xcode: "26.6"
+      ios_signing:
+        provisioning_profiles:
+          - stickpocket-testflight-v2
+        certificates:
+          - ciotola-distribution
+    scripts:
+      - name: Controlla sorgente e imposta numero build
+        script: |
+          set -euo pipefail
+          test "$CM_BRANCH" = main
+          xcodebuild -version
+          node --test Tests/scanner.test.cjs
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $PROJECT_BUILD_NUMBER" StickPocket/Info.plist
+      - name: Configura firma per TestFlight interno
+        script: |
+          set -euo pipefail
+          xcode-project use-profiles --custom-export-options='{"testFlightInternalTestingOnly": true}'
+      - name: Compila archivio firmato e IPA
+        script: |
+          set -euo pipefail
+          xcode-project build-ipa --project StickPocket.xcodeproj --scheme StickPocket
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
+        submit_to_app_store: false
