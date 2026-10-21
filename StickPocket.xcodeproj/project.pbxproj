@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		658293E174B324946E8A90B8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/App/StickPocketApp.swift;
+			sourceTree = "<group>";
+		};
+		76144D55B2EB59296F0FBEF3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Model/Sticker.swift;
+			sourceTree = "<group>";
+		};
+		E5DB846EE53581C3AC2E0208 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Model/StickerStore.swift;
+			sourceTree = "<group>";
+		};
+		465DA88120C14243F860DDFE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Views/CandidatePicker.swift;
+			sourceTree = "<group>";
+		};
+		C4D217526EB31FE13AC455A4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Views/CropEditor.swift;
+			sourceTree = "<group>";
+		};
+		A1C46D5261C51F203E9A1A53 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Views/InfoView.swift;
+			sourceTree = "<group>";
+		};
+		95267B13858DCD70CC51C600 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Views/LibraryView.swift;
+			sourceTree = "<group>";
+		};
+		A88CFB8DD1A110AF083BCA55 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Views/StickerDetailView.swift;
+			sourceTree = "<group>";
+		};
+		B9F209CD1B23E30E216A79C6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Web/MediaDownloader.swift;
+			sourceTree = "<group>";
+		};
+		4660F4F3181218496A100CCF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StickPocket/Web/TikTokBrowser.swift;
+			sourceTree = "<group>";
+		};
+		38F5261E46CE3746BA68501E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.javascript;
+			path = StickPocket/Web/VisibleImages.js;
+			sourceTree = "<group>";
+		};
+		7515CD65B4918094E765703D = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = StickPocket/Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		93D9533B917393AD640D9464 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = StickPocket/PrivacyInfo.xcprivacy;
+			sourceTree = "<group>";
+		};
+		2BE2E4C96AB1121448497222 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = StickPocket/Info.plist;
+			sourceTree = "<group>";
+		};
+		544CFBBEE14F2A1AB11CF8DB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Tests/StickPocketTests.swift;
+			sourceTree = "<group>";
+		};
+		903D89349ACD823DD0D68CA1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.gif;
+			path = Tests/Fixtures/animated.gif;
+			sourceTree = "<group>";
+		};
+		9BFEA3070F8D9F2BA76004DC = {
+			isa = PBXBuildFile;
+			fileRef = 658293E174B324946E8A90B8;
+		};
+		F7C2835FADF0807D3B8221FA = {
+			isa = PBXBuildFile;
+			fileRef = 76144D55B2EB59296F0FBEF3;
+		};
+		36FD48BC403B8691491B76D1 = {
+			isa = PBXBuildFile;
+			fileRef = E5DB846EE53581C3AC2E0208;
+		};
+		5266B3A1144C25FDA5186999 = {
+			isa = PBXBuildFile;
+			fileRef = 465DA88120C14243F860DDFE;
+		};
+		61603F2882180320883D734D = {
+			isa = PBXBuildFile;
+			fileRef = C4D217526EB31FE13AC455A4;
+		};
+		8C455830EDD39D6087EC5170 = {
+			isa = PBXBuildFile;
+			fileRef = A1C46D5261C51F203E9A1A53;
+		};
+		07D6DB9D0ADE59336CE5EF38 = {
+			isa = PBXBuildFile;
+			fileRef = 95267B13858DCD70CC51C600;
+		};
+		6D5717F0B088E7E61B23C59E = {
+			isa = PBXBuildFile;
+			fileRef = A88CFB8DD1A110AF083BCA55;
+		};
+		15B6C63712FE9C2CA1778F30 = {
+			isa = PBXBuildFile;
+			fileRef = B9F209CD1B23E30E216A79C6;
+		};
+		653EC04A27606E2625E19AD5 = {
+			isa = PBXBuildFile;
+			fileRef = 4660F4F3181218496A100CCF;
+		};
+		949D493B91791558E87BC5D7 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFEA3070F8D9F2BA76004DC,
+				F7C2835FADF0807D3B8221FA,
+				36FD48BC403B8691491B76D1,
+				5266B3A1144C25FDA5186999,
+				61603F2882180320883D734D,
+				8C455830EDD39D6087EC5170,
+				07D6DB9D0ADE59336CE5EF38,
+				6D5717F0B088E7E61B23C59E,
+				15B6C63712FE9C2CA1778F30,
+				653EC04A27606E2625E19AD5,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD92572B49AC16A86614498D = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2902E53802F8427F83972205 = {
+			isa = PBXBuildFile;
+			fileRef = 38F5261E46CE3746BA68501E;
+		};
+		FBE72D3ACF64432C53F51C00 = {
+			isa = PBXBuildFile;
+			fileRef = 7515CD65B4918094E765703D;
+		};
+		56254A680B9767283869FD16 = {
+			isa = PBXBuildFile;
+			fileRef = 93D9533B917393AD640D9464;
+		};
+		8ECC8B5D05B79F879ACDF1A2 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2902E53802F8427F83972205,
+				FBE72D3ACF64432C53F51C00,
+				56254A680B9767283869FD16,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1904FF976222B9A9DD885229 = {
+			isa = PBXBuildFile;
+			fileRef = 544CFBBEE14F2A1AB11CF8DB;
+		};
+		77A03FEE20FE96AD9384861E = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1904FF976222B9A9DD885229,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E05DB79C430AA1B0BA487AFC = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A170F42E812CB3DAD23F6FA = {
+			isa = PBXBuildFile;
+			fileRef = 903D89349ACD823DD0D68CA1;
+		};
+		D5C76E148680C094C001AC35 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A170F42E812CB3DAD23F6FA,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E783A9E10D2A8ABA38CD11C = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = StickPocket.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C7CCDEB3609F1FAA874E941 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = StickPocketTests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FBDC4F23F93125BBEEAE800C = {
+			isa = PBXGroup;
+			children = (
+				4E783A9E10D2A8ABA38CD11C,
+				6C7CCDEB3609F1FAA874E941,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C3B0F03DC089F93B8457928 = {
+			isa = PBXGroup;
+			children = (
+				658293E174B324946E8A90B8,
+				76144D55B2EB59296F0FBEF3,
+				E5DB846EE53581C3AC2E0208,
+				465DA88120C14243F860DDFE,
+				C4D217526EB31FE13AC455A4,
+				A1C46D5261C51F203E9A1A53,
+				95267B13858DCD70CC51C600,
+				A88CFB8DD1A110AF083BCA55,
+				B9F209CD1B23E30E216A79C6,
+				4660F4F3181218496A100CCF,
+				38F5261E46CE3746BA68501E,
+				7515CD65B4918094E765703D,
+				93D9533B917393AD640D9464,
+				2BE2E4C96AB1121448497222,
+			);
+			name = StickPocket;
+			sourceTree = "<group>";
+		};
+		E717C295FF9827DFF805D88B = {
+			isa = PBXGroup;
+			children = (
+				544CFBBEE14F2A1AB11CF8DB,
+				903D89349ACD823DD0D68CA1,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		870B3294C0CBD48AF6BBCC1B = {
+			isa = PBXGroup;
+			children = (
+				3C3B0F03DC089F93B8457928,
+				E717C295FF9827DFF805D88B,
+				FBDC4F23F93125BBEEAE800C,
+			);
+			sourceTree = "<group>";
+		};
+		B2CC8FACB14403E1FC86EE6C = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		BC40CF49C2B29B0DDFBE8D7F = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6650A2B5E24FA7522CE6B81C = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2CC8FACB14403E1FC86EE6C,
+				BC40CF49C2B29B0DDFBE8D7F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD98D947BB3BB707E8F22B5 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigi.stickpocket;
+				INFOPLIST_FILE = StickPocket/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		972F03D322E84EA0EE1F79C2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigi.stickpocket;
+				INFOPLIST_FILE = StickPocket/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		268D2D29669C504AD910B275 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD98D947BB3BB707E8F22B5,
+				972F03D322E84EA0EE1F79C2,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE54ECDEA12BB0504790C8C = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigi.stickpocket.tests;
+				GENERATE_INFOPLIST_FILE = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				CODE_SIGN_STYLE = Automatic;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StickPocket.app/StickPocket";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		D71623097D1ECB7444F2BFE2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigi.stickpocket.tests;
+				GENERATE_INFOPLIST_FILE = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				CODE_SIGN_STYLE = Automatic;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StickPocket.app/StickPocket";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D54537A1E0B78DECB3F131F4 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE54ECDEA12BB0504790C8C,
+				D71623097D1ECB7444F2BFE2,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F75109BEB4DD8800DA6B45F8 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 268D2D29669C504AD910B275;
+			buildPhases = (
+				949D493B91791558E87BC5D7,
+				BD92572B49AC16A86614498D,
+				8ECC8B5D05B79F879ACDF1A2,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickPocket;
+			productName = StickPocket;
+			productReference = 4E783A9E10D2A8ABA38CD11C;
+			productType = "com.apple.product-type.application";
+		};
+		7E85D4A68785761E1DBB22D8 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0;
+			proxyType = 1;
+			remoteGlobalIDString = F75109BEB4DD8800DA6B45F8;
+			remoteInfo = StickPocket;
+		};
+		9F8F6AF81E0B8CD0E2C16D29 = {
+			isa = PBXTargetDependency;
+			target = F75109BEB4DD8800DA6B45F8;
+			targetProxy = 7E85D4A68785761E1DBB22D8;
+		};
+		C062A5A4A7F4F37DD90F54CB = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D54537A1E0B78DECB3F131F4;
+			buildPhases = (
+				77A03FEE20FE96AD9384861E,
+				E05DB79C430AA1B0BA487AFC,
+				D5C76E148680C094C001AC35,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8F6AF81E0B8CD0E2C16D29,
+			);
+			name = StickPocketTests;
+			productName = StickPocketTests;
+			productReference = 6C7CCDEB3609F1FAA874E941;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		98F54143AB4E86B28C3AFEE0 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					F75109BEB4DD8800DA6B45F8 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					C062A5A4A7F4F37DD90F54CB = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = F75109BEB4DD8800DA6B45F8;
+					};
+				};
+			};
+			buildConfigurationList = 6650A2B5E24FA7522CE6B81C;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = it;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				it,
+				en,
+				Base,
+			);
+			mainGroup = 870B3294C0CBD48AF6BBCC1B;
+			productRefGroup = FBDC4F23F93125BBEEAE800C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F75109BEB4DD8800DA6B45F8,
+				C062A5A4A7F4F37DD90F54CB,
+			);
+		};
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0;
+}

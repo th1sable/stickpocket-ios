@@ -1,0 +1,23 @@
+name: Verifica iOS
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verifica e test su simulatore iPhone
+        run: bash scripts/test-ios.sh
+      - name: Risultato dei test
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-ios
+          path: build/Tests-*.xcresult
+          if-no-files-found: ignore
+          retention-days: 7
