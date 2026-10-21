@@ -16,6 +16,7 @@ Data: 21 ottobre 2026.
 | Build Release iPhone con Xcode 26.6 / SDK iOS 26.5 | Archivio creato con successo, senza firma |
 | Test nativi XCTest su iPhone 17 Pro, iOS 26.5 | 7 superati, 0 falliti |
 | Selettore immagini Node nella stessa esecuzione CI | 9 superati, 0 falliti |
+| Avvio fuori dai test e schermata sul simulatore iPhone 17 Pro | Riuscito; schermata acquisita e controllata visivamente |
 | Progetto su GitHub | Codice e risorse in th1sable/stickpocket-ios, pubblico con autorizzazione del proprietario |
 
 I test Node coprono selezione di immagini caricate, duplicati, esclusione di
@@ -46,7 +47,7 @@ eliminazione, i limiti degli input e le regole sui link.
 
 ## Ancora da verificare su Apple
 
-- Avvio dell’interfaccia su simulatore e iPhone, accessibilità e dimensioni testo.
+- Avvio su iPhone reale, interazioni complete, accessibilità e dimensioni testo.
 - Importazione da Foto e dai provider File, anche iCloud Drive.
 - Login web TikTok, apertura dei commenti e di una propria chat.
 - Presenza delle immagini sticker nel DOM web e recupero dei file originali.

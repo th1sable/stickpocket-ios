@@ -7,6 +7,10 @@ Release per iPhone. L’archivio prodotto è senza firma: non è installabile e 
 è su TestFlight. Il recupero da TikTok non è stato verificato su un account
 reale o su iPhone. Per i test eseguiti vedere VALIDATION.md.**
 
+Schermata reale della versione avviata sul simulatore iPhone 17 Pro:
+
+<img src="docs/StickPocket-iPhone.png" alt="Raccolta StickPocket sul simulatore iPhone" width="320">
+
 ## Cosa contiene
 
 - Raccolta locale con ricerca, preferiti, rinomina ed eliminazione.
