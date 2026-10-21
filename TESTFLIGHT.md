@@ -34,12 +34,23 @@ La disinstallazione dell’app cancella la raccolta: esporta i file da conservar
 Per segnalare un problema basta descrivere il passaggio e il messaggio d’errore;
 non inviare password, codici di accesso o screenshot di chat private.
 
-## Passaggio Apple ancora da completare
+## Configurazione Apple e Codemagic
 
-- Registrare l’identificatore di StickPocket nel team Apple del proprietario.
-- Creare la relativa scheda App Store Connect.
-- Configurare la firma solo per questa app con il collegamento Apple autorizzato.
-- Generare e verificare una nuova build firmata con Xcode 26 o successivo.
-- Caricarla su TestFlight per la prova interna del proprietario.
+Il 21 ottobre 2026 sono stati registrati l’identificatore `com.luigi.stickpocket`
+e la scheda App Store Connect di StickPocket (Apple ID `6825385363`).
+Il profilo dedicato è `StickPocket TestFlight`. Il workflow manuale
+`stickpocket-testflight` in `codemagic.yaml` usa la connessione Apple e il
+certificato già conservati in Codemagic. Le chiavi private non sono nel repository.
+
+La compilazione usa Xcode 26.6 e un Mac mini M2, con limite di 20 minuti.
+Il numero di build deriva da `PROJECT_BUILD_NUMBER`. L’esportazione è riservata
+ai test interni; il caricamento non invia l’app alla verifica pubblica App Store.
+Il gruppo interno è `StickPocket - Prova personale`.
+
+Primo avvio della compilazione firmata:
+https://codemagic.io/app/6ad8cd6aeef817f487130a29/build/6ad8d0288a524d15d6a5b17f
+
+Attendere il successo della compilazione, del caricamento e dell’elaborazione
+Apple prima di considerare la build disponibile sul dispositivo.
 
 Nessuna pubblicazione sull’App Store è inclusa in questa fase di prova.
