@@ -13,8 +13,8 @@ Data: 21 ottobre 2026.
 | Impostazione dei target | Solo iPhone, iOS 17 o successivo |
 | File plist, schema Xcode e workspace XML | Validamente serializzati |
 | Sintassi script di test e generatore Python | Superata |
-| Avvio della verifica GitHub Actions | Configurato solo per richiesta manuale; non avviato |
-| Progetto su GitHub | Codice e risorse caricati in th1sable/stickpocket-ios |
+| Avvio della verifica GitHub Actions | Prima esecuzione 39614222806 avviata; risultato ancora in attesa |
+| Progetto su GitHub | Codice e risorse in th1sable/stickpocket-ios, pubblico con autorizzazione del proprietario |
 
 I test Node coprono selezione di immagini caricate, duplicati, esclusione di
 immagini fuori schermo e nascoste, avatar, schemi non supportati, immagini
@@ -30,9 +30,9 @@ ritaglio nei limiti dell’immagine, conservazione di una GIF animata byte per b
 duplicati, riapertura della raccolta, preferiti, rinomina, eliminazione, file
 non validi e protezione di un indice corrotto.
 
-Non è stata eseguita perché questo ambiente non dispone di Xcode o di un SDK
-iOS. Il percorso remoto è predisposto su GitHub; il suo avvio resta in attesa
-della scelta del percorso di compilazione. Il controllo della sintassi Swift
+È in corso la prima esecuzione remota con Xcode 16.4 e simulatore iPhone 16 Pro,
+iOS 18.5, su GitHub Actions. Questo ambiente locale non dispone di Xcode o di un SDK
+iOS. Il controllo della sintassi Swift
 non verifica i tipi, l’esistenza delle API, la compilazione o il comportamento
 dell’app.
 

@@ -18,3 +18,10 @@ xcodebuild -project StickPocket.xcodeproj -scheme StickPocket \
   -destination "platform=iOS Simulator,id=$device_id" \
   -derivedDataPath build/DerivedData -resultBundlePath "build/Tests-$(date -u +%Y%m%dT%H%M%S).xcresult" \
   CODE_SIGNING_ALLOWED=NO test
+
+# Keep a real simulator screenshot for visual review after the tests pass.
+xcrun simctl bootstatus "$device_id" -b
+xcrun simctl install "$device_id" build/DerivedData/Build/Products/Debug-iphonesimulator/StickPocket.app
+xcrun simctl launch "$device_id" com.luigi.stickpocket
+sleep 3
+xcrun simctl io "$device_id" screenshot build/StickPocket-iPhone.png

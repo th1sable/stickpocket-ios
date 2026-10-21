@@ -61,9 +61,11 @@ La verifica completa può essere eseguita su un Mac con:
 Lo script richiede Node per i test del selettore web e Xcode per i test nativi.
 Il progetto e il workflow .github/workflows/ios-check.yml sono caricati in
 https://github.com/th1sable/stickpocket-ios .
-Il workflow si attiva solo manualmente e non è stato avviato. L’avvio è in
-attesa della scelta del percorso di compilazione; quote e condizioni del proprio
-account vanno verificate prima di ogni esecuzione a pagamento.
+Il repository è pubblico per usare i runner standard gratuiti di GitHub.
+Il workflow si attiva solo manualmente. La prima esecuzione è stata avviata il
+21 ottobre 2026; l’esito verificato è riportato in VALIDATION.md.
+Quando i test riescono, il workflow avvia anche l’app sul simulatore e conserva
+una schermata nell’artefatto test-ios, insieme al risultato dei test.
 
 Per rigenerare il progetto dopo aver aggiunto o rimosso file Swift:
 

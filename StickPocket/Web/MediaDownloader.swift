@@ -16,9 +16,9 @@ private final class MediaRedirectPolicy: NSObject, URLSessionTaskDelegate, @unch
 }
 
 enum MediaDownloader {
-    static func fetch(_ candidate: ImageCandidate) async throws -> Data {
+    static func fetch(_ candidate: ImageCandidate, maxBytes: Int = MediaRules.maxBytes) async throws -> Data {
         if let data = candidate.inlineData {
-            guard data.count <= MediaRules.maxBytes else { throw PocketError.tooLarge }
+            guard data.count <= maxBytes else { throw PocketError.tooLarge }
             return data
         }
         guard let url = candidate.remoteURL else { throw PocketError.restrictedMedia }
@@ -36,12 +36,12 @@ enum MediaDownloader {
         let (bytes, response) = try await session.bytes(for: request)
         guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode),
               let finalURL = http.url, MediaRules.canDownload(finalURL) else { throw PocketError.restrictedMedia }
-        if response.expectedContentLength > Int64(MediaRules.maxBytes) { throw PocketError.tooLarge }
+        if response.expectedContentLength > Int64(maxBytes) { throw PocketError.tooLarge }
         guard response.mimeType?.hasPrefix("image/") == true else { throw PocketError.noMedia }
         var data = Data()
-        data.reserveCapacity(Int(max(0, min(response.expectedContentLength, Int64(MediaRules.maxBytes)))))
+        data.reserveCapacity(Int(max(0, min(response.expectedContentLength, Int64(maxBytes)))))
         for try await byte in bytes {
-            if data.count >= MediaRules.maxBytes { throw PocketError.tooLarge }
+            if data.count >= maxBytes { throw PocketError.tooLarge }
             data.append(byte)
         }
         try Task.checkCancellation()

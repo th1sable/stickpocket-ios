@@ -90,19 +90,32 @@ struct CandidatePicker: View {
 
 private struct CandidateThumbnail: View {
     let candidate: ImageCandidate
+    @State private var image: UIImage?
+    @State private var failed = false
+
     var body: some View {
         Group {
-            if let data = candidate.inlineData, let image = UIImage(data: data) {
+            if let image {
                 Image(uiImage: image).resizable().scaledToFit()
-            } else if let url = candidate.remoteURL {
-                AsyncImage(url: url) { phase in
-                    if let image = phase.image {
-                        image.resizable().scaledToFit()
-                    } else if phase.error != nil {
-                        Image(systemName: "photo").foregroundStyle(.secondary)
-                    } else { ProgressView() }
-                }
-            } else { Image(systemName: "photo") }
+            } else if failed {
+                Image(systemName: "photo").foregroundStyle(.secondary)
+            } else { ProgressView() }
+        }
+        .task(id: candidate.src) {
+            image = nil
+            failed = false
+            do {
+                // Thumbnails follow the same cookie-free redirect and size policy
+                // as the original, with a smaller limit for the scrolling grid.
+                let bytes = try await MediaDownloader.fetch(candidate, maxBytes: 4 * 1024 * 1024)
+                try Task.checkCancellation()
+                let thumbnail = try ImageInspector.inspect(bytes).thumbnail
+                image = UIImage(data: thumbnail)
+                failed = image == nil
+            } catch {
+                guard !Task.isCancelled else { return }
+                failed = true
+            }
         }
     }
 }
